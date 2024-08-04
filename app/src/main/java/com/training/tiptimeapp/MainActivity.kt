@@ -43,7 +43,7 @@ class MainActivity : AppCompatActivity() {
                     binding.serviceEt.text?.clear()
                     binding.radioGroup.check(R.id.amazing_rb)
                     binding.tipAmountTv.setText(getString(R.string.tip_amount))
-                    true.also { it.also { it -> binding.roundTipSwitch.isChecked = it } }
+                    binding.roundTipSwitch.isChecked=true
                 }
                 .setBackgroundTint(getColor(android.R.color.background_dark))
                 .setTextColor(getColor(android.R.color.white))
