@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <style name="MyRb">
+        <item name="android:textStyle">normal|italic</item>
+        <item name="android:textSize">25dp</item>
+        <item name="color">#FF9800</item>
+    </style>
+</resources>
