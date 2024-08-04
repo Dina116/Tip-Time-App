@@ -1,10 +1,9 @@
 package com.training.tiptimeapp
 
 import android.os.Bundle
-import androidx.activity.enableEdgeToEdge
+
 import androidx.appcompat.app.AppCompatActivity
-import androidx.core.view.ViewCompat
-import androidx.core.view.WindowInsetsCompat
+
 import com.google.android.material.snackbar.BaseTransientBottomBar
 import com.google.android.material.snackbar.Snackbar
 import com.training.tiptimeapp.databinding.ActivityMainBinding
@@ -37,14 +36,14 @@ class MainActivity : AppCompatActivity() {
                 total = ceil(total)
             }
 
-            binding.tipAmountTv.text = "$$total"
+            binding.tipAmountTv.text = getString(R.string.total_number)
             Snackbar
                 .make(binding.root,"Reset",BaseTransientBottomBar.LENGTH_INDEFINITE)
                 .setAction("proceed"){
                     binding.serviceEt.text?.clear()
                     binding.radioGroup.check(R.id.amazing_rb)
-                    binding.tipAmountTv.setText("Tip Amount")
-                    binding.roundTipSwitch.isChecked=true
+                    binding.tipAmountTv.setText(getString(R.string.tip_amount))
+                    true.also { binding.roundTipSwitch.isChecked = it }
                 }
                 .setBackgroundTint(getColor(android.R.color.background_dark))
                 .setTextColor(getColor(android.R.color.white))
